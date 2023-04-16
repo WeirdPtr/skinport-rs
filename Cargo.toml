@@ -1,0 +1,38 @@
+[package]
+name = "skinport"
+version = "0.1.0"
+description = "Skinport API wrapper for Rust"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["WeirdPtr <WeirdPtr@WeirdPtr.com>"]
+repository = "https://github.com/WeirdPtr/skinport-rs"
+keywords = ["api", "wrapper", "skinport"]
+include = ["src/**/*", "LICENSE-MIT.md", "LICENSE-APACHE.md", "README.md"]
+
+[dependencies]
+serde_json = "1.0"
+base64 = "0.21"
+
+[dependencies.tokio]
+version = "1"
+default-features = true
+features = ["rt", "macros"]
+
+[dependencies.reqwest]
+version = "0.11"
+default-features = true
+features = ["json"]
+
+[dependencies.serde]
+version = "1.0"
+default-features = true
+features = ["derive"]
+
+[features]
+default = ["full"]
+full = ["rest"]
+rest = ["requests"]
+requests = ["item-request", "sale-request", "account-request"]
+item-request = []
+sale-request = []
+account-request = []
