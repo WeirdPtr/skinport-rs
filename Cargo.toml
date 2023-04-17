@@ -1,6 +1,6 @@
 [package]
 name = "skinport"
-version = "0.1.0"
+version = "0.1.1"
 description = "Skinport API wrapper for Rust"
 edition = "2021"
 license = "MIT OR Apache-2.0"
@@ -12,11 +12,6 @@ include = ["src/**/*", "LICENSE-MIT.md", "LICENSE-APACHE.md", "README.md"]
 [dependencies]
 serde_json = "1.0"
 base64 = "0.21"
-
-[dependencies.tokio]
-version = "1"
-default-features = true
-features = ["rt", "macros"]
 
 [dependencies.reqwest]
 version = "0.11"
